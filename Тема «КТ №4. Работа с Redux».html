@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Требования к КТ</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+      line-height: 1.6;
+      color: #1D202B;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: #ffffff;
+    }
+    h4 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1em;
+      color: #1D202B;
+    }
+    p {
+      margin: 0.5em 0;
+    }
+    pre {
+      background: #f9f9fb;
+      border: 1px solid #e8e8eb;
+      border-radius: 8px;
+      padding: 16px;
+      overflow-x: auto;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    code {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 16px 0;
+      border: 1px solid #e8e8eb;
+      border-radius: 8px;
+    }
+    ol {
+      padding-left: 1.5em;
+    }
+    li {
+      margin-bottom: 0.5em;
+    }
+    b {
+      font-weight: 700;
+    }
+    i {
+      font-style: italic;
+    }
+    .requirement-block {
+      background: #f9f9fb;
+      border-radius: 8px;
+      padding: 24px;
+      border: 1px solid #e8e8eb;
+    }
+  </style>
+</head>
+<body>
+
+<div class="requirement-block">
+  <h4>Требования к КТ</h4>
+
+  <p>Используя redux, необходимо реализовать аналог работы корзины.</p>
+
+  <p>В качестве исходных данных задан макет (ориентировочный) и defaultState:</p>
+
+  <pre><code>const defaultState = [
+    {id: 1, title: 'Велосипед', count: 5},
+    {id: 2, title: 'Самокат', count: 4},
+    {id: 3, title: 'Гантели', count: 7},
+    {id: 4, title: 'Ракетки', count: 1}
+]</code></pre>
+
+  <p><b>Макет:</b></p>
+
+  <img
+    src="https://s3newlxpbulgakov.storage.yandexcloud.net/user_b5a54ff3-3ffb-4874-a943-9893da0d4eba/image_0bba30d1-b6d2-4a88-aed1-6a02f340a88d.png"
+    alt="Макет корзины с товарами и кнопками + / −"
+  >
+
+  <p>Для каждого выводимого товара необходимо реализовать кнопки + -, который будут менять значение count уникально для каждого товара.</p>
+
+  <p><b>Требование к работе:</b></p>
+
+  <ol>
+    <li>Стилизация приложения может быть произвольной (по макету).</li>
+    <li>Работа должна быть выполнена используя библиотеку redux. В качестве defualtState необходимо взять заготовленный выше массив.</li>
+    <li>Работа должна быть опубликована на gh-pages.</li>
+  </ol>
+
+  <p><b>Условия выполнения:</b></p>
+
+  <ol>
+    <li>Реализуйте проверку, которая будет ограничивать значение count от 1 до 25 (включительно)</li>
+    <li>Реализуйте кнопку, которая будет добавлять новый элемент в корзину, указав дефолтное значение для count - 1, для id - либо автоинкремент, либо любое уникальное значение. Имя товара можно брать с результата работы prompt()</li>
+    <li>Реализуйте удаление элемента корзины только в том случае, если значение count будет меньше 1 (то есть 0)</li>
+  </ol>
+</div>
+
+</body>
+</html>

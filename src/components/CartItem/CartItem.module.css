@@ -1,0 +1,43 @@
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 145px;
+    padding: 30px 40px;
+    border: 1px solid #555;
+}
+.item h2 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 400;
+    overflow-wrap: anywhere;
+}
+.counter {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-shrink: 0;
+}
+.counter button {
+    width: 32px;
+    height: 38px;
+    border: 0;
+    background: transparent;
+    font-size: 34px;
+}
+.counter output {
+    min-width: 35px;
+    font-size: 30px;
+    text-align: center;
+}
+@media (max-width: 600px) {
+    .item {
+        padding: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .item h2 {
+        font-size: 26px;
+    }
+}
